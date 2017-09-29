@@ -116,7 +116,7 @@
           <div class="row">
           	<div class="col-md-2"></div>
           	<div class="col-md-8 modal-box">
-          		<div>{{vesJson}}</div>
+          		<div class="jsondata">{{vesJson}}</div>
           		<div class="box-header ves-box-header">VES</div>
           	</div>
           	<div class="col-md-2"></div>          	
@@ -124,7 +124,7 @@
           <div class="row">
           	<div class="col-md-1"></div>
           	<div class="col-md-4 modal-box margin-top-50">
-          		<div>{{rawJson}}</div>
+          		<div class="jsondata">{{rawJson}}</div>
           		<div class="box-header vnf-box-header">VNF</div>
           	</div>
           	<div class="col-md-2 modal-arrows">
