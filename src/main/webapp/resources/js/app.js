@@ -59,7 +59,7 @@ app.directive('gridTable',function(){
         }
     };
 });
-app.app.directive('graphTable',function(){
+app.directive('graphTable',function(){
     return {
         restrict : 'AE',
         scope : {
