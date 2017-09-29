@@ -5,7 +5,7 @@ function specific_vf_module_table(input) {
 
   	var table = document.createElement("TABLE");
     table.setAttribute("id", "Specific_vf_module");
-    document.body.appendChild(table);
+    document.getElementById("newCust").appendChild(table);
 
 	var Th = document.createElement("TH");
     Th.setAttribute("id", "myTh");

@@ -8,7 +8,7 @@ function specific_generic_vnf_table(input){
 
     var table = document.createElement("TABLE");
     table.setAttribute("id", "Specific_Generic_vnf");
-    document.body.appendChild(table);
+    document.getElementById("newCust").appendChild(table);
 
     var Th = document.createElement("TH");
     Th.setAttribute("id", "myTh");

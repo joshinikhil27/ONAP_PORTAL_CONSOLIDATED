@@ -6,7 +6,7 @@ function specific_customer_table(input){
 	
     var table = document.createElement("TABLE");
     table.setAttribute("id", "Specific_Customer");
-    document.body.appendChild(table);
+    document.getElementById("newCust").appendChild(table);
 
     var Th1 = document.createElement("TH");
     Th1.setAttribute("id", "myTh1");

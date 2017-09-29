@@ -1,11 +1,12 @@
 function specific_subscription_table(input){
+
 	var tables = document.getElementsByTagName("TABLE");
     for (var i=tables.length-1; i>=0;i-=1)
         if (tables[i]) tables[i].parentNode.removeChild(tables[i]);
 
     var table = document.createElement("TABLE");
     table.setAttribute("id", "Specific_Subscription");
-    document.body.appendChild(table);
+    document.getElementById("newCust").appendChild(table);
 
     var Th1 = document.createElement("TH");
     Th1.setAttribute("id", "myTh1");
