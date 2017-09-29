@@ -1,0 +1,88 @@
+{
+  "router1": {
+    "ospf": {
+      "process-id": "1",
+      "networks": [
+				{
+					"subnet-ip": "200.200.200.0/24",
+					"area-id": "20"
+				},
+				{
+					"subnet-ip": "287.278.215.0/29",
+					"area-id": "51"
+      	}
+			]
+    },
+    "bgp": {
+      "as-number": "2000",
+      "router-id": "10.10.1.2",
+      "neighbors": {
+        "as-number": "1000",
+        "peer-ip": "10.10.1.1"
+      }
+    },
+	"ipsla":[
+		{
+			"cos-entry-number":"40102",
+			"destination-address":"12.12.12.12",
+			"source-address":"10.10.1.1",
+			"customer-name":"Hello Inc"
+		},
+		{
+			"cos-entry-number":"40103",
+			"destination-address":"10.11.12.12",
+			"source-address":"10.10.1.1",
+			"customer-name":"ABC Inc"
+		},
+		{
+			"cos-entry-number":"40105",
+			"destination-address":"12.5.12.12",
+			"source-address":"10.10.1.2",
+			"customer-name":"test Inc"
+		}
+	]
+	},
+"router2":{
+	"ospf": {
+      "process-id": "2",
+      "networks": [
+				{
+					"subnet-ip": "220.120.100.0/88",
+					"area-id": "87"
+				},
+				{
+					"subnet-ip": "358.274.215.0/32",
+					"area-id": "32"
+      	}
+			]
+    },
+    "bgp": {
+      "as-number": "4000",
+      "router-id": "10.12.1.3",
+      "neighbors": {
+        "as-number": "1100",
+        "peer-ip": "12.13.1.1"
+      }
+    },
+	"ipsla":[
+		{
+			"cos-entry-number":"40102",
+			"destination-address":"12.12.12.12",
+			"source-address":"10.10.1.1",
+			"customer-name":"Hello Inc"
+		},
+		{
+			"cos-entry-number":"40103",
+			"destination-address":"10.11.12.12",
+			"source-address":"10.10.1.1",
+			"customer-name":"ABC Inc"
+		},
+		{
+			"cos-entry-number":"40105",
+			"destination-address":"12.5.12.12",
+			"source-address":"10.10.1.2",
+			"customer-name":"test Inc"
+		}
+	]
+}
+}           

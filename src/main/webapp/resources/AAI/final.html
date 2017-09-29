@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+   <link rel="stylesheet" type="text/css" href="style.css"/>
+ </head>
+
+ <script src="./lib/jquery-1.10.2.min.js"></script>
+
+ <script src="./lib/d3.v3.min.js"></script> 
+ <script src="./lib/d3.v3.min.js"></script>
+
+ <script src="./templates/dndTree.js"></script>
+
+ <script src="./button_clicks/getCustomers.js"></script>
+
+ <script src="./button_clicks/clearit.js"></script>
+
+ <script src="./api_calls/onClick_Business.js"></script>
+
+ <script src="./node_clicks/CSTMRclicked.js"></script>
+ <script src="./node_clicks/SUBSclicked.js"></script> 
+ <script src="./node_clicks/INSTclicked.js"></script>
+ <script src="./node_clicks/S_SUBSclicked.js"></script>
+
+ <script src="./graphs/customers_graph.js"></script> 
+ <script src="./graphs/customer_graph.js"></script>
+ <script src="./graphs/root_customer_graph.js"></script>
+ <script src="./graphs/specific_customer_graph.js"></script>
+ <script src="./graphs/specific_subscription_graph.js"></script>
+ <script src="./graphs/specific_instance_graph.js"></script>
+ 
+<script src="./tables/root_customer_table.js"></script>
+ <script src="./tables/generic_vnfs_table.js"></script>
+ <script src="./tables/specific_generic_vnf_table.js"></script>
+ <script src="./tables/specific_vf_module_table.js"></script>
+ <script src="./tables/customers_table.js"></script>
+ <script src="./tables/specific_customer_table.js"></script>
+ <script src="./tables/specific_subscription_table.js"></script>
+ <script src="./tables/specific_s_instance_table.js"></script>
+ <script src="./tables/createRow.js"></script>
+ 
+ <script>
+    var Cust= ["Name", "UUID"];
+    var Pserver= [""];
+    var Pnf= [""];
+
+var changeCat = function changeCat(firstList) {
+    var newSel = document.getElementById("obj_search");
+    //if you want to remove this default option use newSel.innerHTML=""
+    newSel.innerHTML="<option value=\"\">Select</option>"; // to reset the second list everytime
+    var opt;
+
+      //test according to the selected value
+      switch (firstList.options[firstList.selectedIndex].value) {
+          case "Cust":
+              for (var i=0; len=Cust.length, i<len; i++) {
+                    opt = document.createElement("option");
+                    opt.value = Cust[i];
+                    opt.text = Cust[i];
+                    newSel.appendChild(opt);
+              }
+              break;
+          case "Pserver":
+              for (var i=0; len=Pserver.length, i<len; i++) {
+                    opt = document.createElement("option");
+                    opt.value = Pserver[i];
+                    opt.text = Pserver[i];
+                    newSel.appendChild(opt);
+              }
+              break;
+          case "Pnf":
+              for (var i=0; len=Pnf.length, i<len; i++) {
+                    opt = document.createElement("option");
+                    opt.value = Pnf[i];
+                    opt.text = Pnf[i];
+                    newSel.appendChild(opt);
+              }
+              break;
+      }
+
+}
+
+</script>
+
+
+ <body>
+
+	<div class="container">
+
+	 <header>
+		<p  style="float:left;margin:10px 20px;border-spacing:10px;color:green;text-decoration:underline">Object Search</p>
+		<br></br>
+
+
+		<p style="float:left;color:black;  margin: 10px 5px">Object type</p>
+		<select name="obj_type" id="obj_type" onchange="changeCat(this);"  style="float:left;margin:10px 0px;border-spacing: 5px"  >
+			 <option selected disabled hidden >Select</option>
+     <option value="Cust">Customer</option>
+     <option value="Pserver">Pserver</option>
+     <option value="Pnf">Pnf</option>
+		</select>
+
+
+		<p style="float:left;color:black; margin: 10px 5px 10px 40px">Search By</p>
+		<select   name="obj_search" id="obj_search" style="float:left;margin:10px 0px">
+				<option selected disabled hidden>Select</option>
+		</select>
+ 
+
+		<input type="text"  name="txtsearch"  value="" style="float:left;margin:10px 30px 10px 40px;text-align:center" ></input>
+
+		<A  onclick="getCustomers()" target="graph"><button style="margin:10px 0px">FIND</button></a>
+
+  
+	</header>
+  
+	<nav>
+		<div id="tree-container" style=".overlay"></div>
+	</nav>
+
+
+	<table></table>
+
+
+	<script>
+		var customer_ids=[];
+		var demonstration_ids=[];
+		// GLOBAL array of customer ids.
+		var cust_subscriptions_ids=[]; 		// // different structure than sigmajs array. This change in structure will be useful when more than one customers are there. 
+		var subscriptions_ids=[];
+		var inst_cust_subs_ids=[];
+        
+        var response={};  		// GLOBAL variable to store the response of API calls.
+		
+    </script>
+
+  </div>
+
+</body>
+</html>

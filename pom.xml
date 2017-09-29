@@ -1,0 +1,128 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.4.2.RELEASE</version>
+  </parent>
+  <groupId>com.microservices</groupId>
+  <artifactId>Onap_SDNC_v1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>ONAP SDNC Controller</name>
+  <description>ONAP SDNC Controller</description>
+  
+  <properties>
+		<java.version>1.8</java.version>
+		<mongojavadriver.version>3.4.2</mongojavadriver.version>
+		<!-- <spring.version>3.2.2.RELEASE</spring.version>
+		<springdata.version>1.2.1.RELEASE</springdata.version> -->
+	</properties>
+
+	<dependencies>
+
+		<!-- Web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	
+	<!-- Spring Data for MongoDB -->
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
+		<dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-mongodb</artifactId>
+		</dependency>
+		
+						
+	<!-- 	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency> -->
+				
+		<!-- Web with Tomcat + Embed -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- JSTL -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+		<!-- Need this to compile JSP -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Need this to compile JSP -->
+		<dependency>
+			<groupId>org.eclipse.jdt.core.compiler</groupId>
+			<artifactId>ecj</artifactId>
+			<version>4.6.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Optional, for bootstrap -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7</version>
+		</dependency>
+
+ 	<!-- <dependency>
+        <groupId>org.mongodb</groupId>
+        <artifactId>mongodb-driver</artifactId>
+        <version>3.4.2</version>
+    </dependency> -->
+    
+    <!-- Java MongoDB Driver -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+		<!-- 	<version>${mongojavadriver.version}</version> -->
+		</dependency>
+
+
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-solr</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.goldmansachs</groupId>
+			<artifactId>gs-collections</artifactId>
+			<version>5.1.0</version>
+		</dependency>
+		
+		<dependency>
+	      	 <groupId>com.att.nsa</groupId>
+	      	 <artifactId>cambriaClient</artifactId>
+	         <version>0.0.1</version>
+	         <!-- <scope>system</scope> -->
+	       <!--  <systemPath>D:\vv00489503\TECHM\girRepo\vesui\vesui\src\main\webapp\WEB-INF\lib\cambriaClient-0.0.1.jar</systemPath> -->
+	        <!-- <systemPath>${basedir}\src\main\webapp\WEB-INF\lib\cambriaClient-0.0.1.jar</systemPath> -->
+    	</dependency>
+    	
+    	<dependency>
+			<groupId>com.att.nsa</groupId>
+			<artifactId>saClientLibrary</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+		
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- Package as an executable jar/war -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

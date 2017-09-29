@@ -1,0 +1,13 @@
+1. Circular reference in value argument not supported.
+Code:---> 
+function click(d) {
+        if (d3.event.defaultPrevented) return; // click suppressed
+        window.alert(JSON.stringify(d)); // ****** Here is the error.
+		d = toggleChildren(d);
+        update(d);
+        centerNode(d);
+		
+		var check = 0;
+		check=CUSTclicked(d);
+    }
+2. Hidden children referrred as "_children"

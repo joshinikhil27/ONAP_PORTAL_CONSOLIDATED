@@ -1,0 +1,46 @@
+{
+  "router1": {
+    	"ipsla":[
+		{
+			"cos-entry-number":"1",
+			"destination-address":"12.12.12.12",
+			"source-address":"10.10.1.1",
+			"customer-name":"Hello Inc"
+		},
+		{
+			"cos-entry-number":"2",
+			"destination-address":"10.11.12.12",
+			"source-address":"10.10.1.1",
+			"customer-name":"ABC Inc"
+		},
+		{
+			"cos-entry-number":"3",
+			"destination-address":"12.5.12.12",
+			"source-address":"10.10.1.2",
+			"customer-name":"test Inc"
+		}
+	]
+	},
+"router2":{
+	"ipsla":[
+		{
+			"cos-entry-number":"4",
+			"destination-address":"12.12.12.12",
+			"source-address":"10.10.1.1",
+			"customer-name":"Hello Inc"
+		},
+		{
+			"cos-entry-number":"5",
+			"destination-address":"10.11.12.12",
+			"source-address":"10.10.1.1",
+			"customer-name":"ABC Inc"
+		},
+		{
+			"cos-entry-number":"6",
+			"destination-address":"12.5.12.12",
+			"source-address":"10.10.1.2",
+			"customer-name":"test Inc"
+		}
+	]
+}
+}           

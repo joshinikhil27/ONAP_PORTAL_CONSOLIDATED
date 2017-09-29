@@ -1,0 +1,220 @@
+{
+	"router1": [
+		{
+			"router_config_details_id": "72",
+			"date": 1503989411290,
+			"version": null,
+			"protocol": "ipsla",
+			"cos_entry_number": "6",
+			"destination_address": "12.12.12.12",
+			"source_address": "10.10.1.1",
+			"customer_name": "Hello Inc",
+			"process_id": null,
+			"subnet_ip": null,
+			"area_id": null,
+			"as_number": null,
+			"router_id": null,
+			"peer_ip": null,
+			"neighbors": null,
+			"networks": null,
+			"networkList": null
+		},
+		{
+			"router_config_details_id": "71",
+			"date": 1503989411289,
+			"version": null,
+			"protocol": "ipsla",
+			"cos_entry_number": "5",
+			"destination_address": "12.12.12.12",
+			"source_address": "10.10.1.1",
+			"customer_name": "Hello Inc",
+			"process_id": null,
+			"subnet_ip": null,
+			"area_id": null,
+			"as_number": null,
+			"router_id": null,
+			"peer_ip": null,
+			"neighbors": null,
+			"networks": null,
+			"networkList": null
+		},
+		{
+			"router_config_details_id": null,
+			"date": 1503989411287,
+			"version": null,
+			"protocol": "ospf",
+			"cos_entry_number": null,
+			"destination_address": null,
+			"source_address": null,
+			"customer_name": null,
+			"process_id": "12",
+			"subnet_ip": null,
+			"area_id": null,
+			"as_number": null,
+			"router_id": null,
+			"peer_ip": null,
+			"neighbors": null,
+			"networks": null,
+			"networkList": [
+				{
+					"subnet_ip": "545",
+					"area_id": "8127"
+				},
+				{
+					"subnet_ip": "454545",
+					"area_id": "8238"
+				}
+			]
+		},
+		{
+			"router_config_details_id": null,
+			"date": 1503989411287,
+			"version": null,
+			"protocol": "bgp",
+			"cos_entry_number": null,
+			"destination_address": null,
+			"source_address": null,
+			"customer_name": null,
+			"process_id": null,
+			"subnet_ip": null,
+			"area_id": null,
+			"as_number": "7654",
+			"router_id": "10.12.1.3",
+			"peer_ip": null,
+			"neighbors": {
+				"peer_ip": "12.13.1.1",
+				"as_number": "1100"
+			},
+			"networks": null,
+			"networkList": null
+		},
+		{
+			"router_config_details_id": "70",
+			"date": 1503989411287,
+			"version": null,
+			"protocol": "ipsla",
+			"cos_entry_number": "4",
+			"destination_address": "12.12.12.12",
+			"source_address": "10.10.1.1",
+			"customer_name": "Hello Inc",
+			"process_id": null,
+			"subnet_ip": null,
+			"area_id": null,
+			"as_number": null,
+			"router_id": null,
+			"peer_ip": null,
+			"neighbors": null,
+			"networks": null,
+			"networkList": null
+		}
+	],
+	"router2": [
+		{
+			"router_config_details_id": "69",
+			"date": 1503989362345,
+			"version": null,
+			"protocol": "ipsla",
+			"cos_entry_number": "3",
+			"destination_address": "12.12.12.12",
+			"source_address": "10.10.1.1",
+			"customer_name": "Hello Inc",
+			"process_id": null,
+			"subnet_ip": null,
+			"area_id": null,
+			"as_number": null,
+			"router_id": null,
+			"peer_ip": null,
+			"neighbors": null,
+			"networks": null,
+			"networkList": null
+		},
+		{
+			"router_config_details_id": "68",
+			"date": 1503989362344,
+			"version": null,
+			"protocol": "ipsla",
+			"cos_entry_number": "2",
+			"destination_address": "12.12.12.12",
+			"source_address": "10.10.1.1",
+			"customer_name": "Hello Inc",
+			"process_id": null,
+			"subnet_ip": null,
+			"area_id": null,
+			"as_number": null,
+			"router_id": null,
+			"peer_ip": null,
+			"neighbors": null,
+			"networks": null,
+			"networkList": null
+		},
+		{
+			"router_config_details_id": null,
+			"date": 1503989362342,
+			"version": null,
+			"protocol": "ospf",
+			"cos_entry_number": null,
+			"destination_address": null,
+			"source_address": null,
+			"customer_name": null,
+			"process_id": "2",
+			"subnet_ip": null,
+			"area_id": null,
+			"as_number": null,
+			"router_id": null,
+			"peer_ip": null,
+			"neighbors": null,
+			"networks": null,
+			"networkList": [
+				{
+					"subnet_ip": "1234",
+					"area_id": "87"
+				},
+				{
+					"subnet_ip": "5678",
+					"area_id": "88"
+				}
+			]
+		},
+		{
+			"router_config_details_id": null,
+			"date": 1503989362342,
+			"version": null,
+			"protocol": "bgp",
+			"cos_entry_number": null,
+			"destination_address": null,
+			"source_address": null,
+			"customer_name": null,
+			"process_id": null,
+			"subnet_ip": null,
+			"area_id": null,
+			"as_number": "4000",
+			"router_id": "10.12.1.3",
+			"peer_ip": null,
+			"neighbors": {
+				"peer_ip": "12.13.1.1",
+				"as_number": "1100"
+			},
+			"networks": null,
+			"networkList": null
+		},
+		{
+			"router_config_details_id": "67",
+			"date": 1503989362342,
+			"version": null,
+			"protocol": "ipsla",
+			"cos_entry_number": "1",
+			"destination_address": "12.12.12.12",
+			"source_address": "10.10.1.1",
+			"customer_name": "Hello Inc",
+			"process_id": null,
+			"subnet_ip": null,
+			"area_id": null,
+			"as_number": null,
+			"router_id": null,
+			"peer_ip": null,
+			"neighbors": null,
+			"networks": null,
+			"networkList": null
+		}
+	]
+}

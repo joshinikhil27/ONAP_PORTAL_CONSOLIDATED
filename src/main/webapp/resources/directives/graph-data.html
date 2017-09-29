@@ -1,0 +1,32 @@
+
+<table class="table table-bordered">
+	<tr class="bg-primary">
+		<!-- <th class="gridStyle text-center" ng-repeat="head in  header" ng-if="head != 'link1' && head != 'link2' && head != 'link3' && head != 'responseTime' && head != 'prediction'" ng-bind="head"></th>
+		<th>##</th> -->
+		<th class="gridStyle text-center">date</th>
+		<th class="gridStyle text-center">Cpu</th>
+		<th class="gridStyle text-center">Memory</th>
+		<th class="gridStyle text-center">Network</th>
+		<th class="gridStyle text-center">Disk Space</th>
+		<th class="gridStyle text-center">Users</th>
+		<th class="gridStyle text-center">Connections</th>
+		<th class="gridStyle text-center">Flaps</th>
+		<th class="gridStyle text-center">Prediction</th>
+		<th class="gridStyle text-center">Select</th>
+	</tr>
+    <tr dir-paginate="data in tabledata | itemsPerPage:10 ">
+        <td ng-hide="!data.date">{{data.date | date : longDate}}</td>
+        <td ng-hide="!data.cpu">{{data.cpu}}</td>
+        <td ng-hide="!data.memory">{{data.memory}}</td>
+        <td ng-hide="!data.network">{{data.network}}</td>
+        <td ng-hide="!data.diskSpace">{{data.diskSpace}}</td>
+        <td ng-hide="!data.numOfUser">{{data.numOfUser}}</td>
+        <td ng-hide="!data.noOfConn">{{data.noOfConn}}</td>
+        <td ng-hide="!data.flaps">{{data.flaps}}</td>
+        <td class="gridStyle" ng-hide="!data.result">{{data.prediction}}</td>
+        <td>
+            <div ng-class="{'imageUnCheck' : (!styleclass[$index]),'imageCheck' : (styleclass[$index])}"  ng-click="callfun({type : $index , calltype : 1})"></div>
+        </td>
+    </tr>
+</table>
+<dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="resources/directives/dirPagination.tpl.html"></dir-pagination-controls>

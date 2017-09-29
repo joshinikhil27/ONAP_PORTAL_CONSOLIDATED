@@ -1,0 +1,72 @@
+
+<style>
+    .textClass { width : 100%;}
+</style>
+<div>
+    <table class="table table-bordered">
+        <thead class="bg-primary">
+<!--             <th class="gridStyle text-center">date</th> -->
+            <th class="gridStyle text-center">cpu</th>
+            <th class="gridStyle text-center">Memory</th>
+            <th class="gridStyle text-center">Network</th>
+            <th class="gridStyle text-center">Disk Space</th>
+            <th class="gridStyle text-center">Users</th>
+            <th class="gridStyle text-center">Connections</th>
+            <th class="gridStyle text-center">flaps</th>
+            <th class="gridStyle text-center">result</th>
+            <th class="gridStyle text-center">Edit</th>
+        </thead>
+        <tbody>
+            <tr dir-paginate="contact in griddata | itemsPerPage:10" ng-include="getTemplate(contact)">
+            </tr>
+        </tbody>
+    </table>
+     <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="resources/directives/dirPagination.tpl.html"></dir-pagination-controls>
+    <script type="text/ng-template" id="display">
+        <!-- td>{{contact.date | date : longDate}}</td -->
+        <td>{{contact.cpu}}</td>
+        <td>{{contact.memory}}</td>
+        <td>{{contact.network}}</td>
+        <td>{{contact.diskSpace}}</td>
+        <td>{{contact.numOfUser}}</td>
+        <td>{{contact.noOfConn}}</td>
+		<td>{{contact.flaps}}</td>
+        <td class="gridStyle">{{contact.result}}</td>
+        <td>
+			<a ng-click="editContact(contact)">
+          		<img alt="" src="resources/images/Edit.png" style="width:16px;"> 
+        	</a>
+            <!-- button ng-click="editContact(contact)">Edit</button -->
+        </td>
+    </script>
+    <script type="text/ng-template" id="edit">
+        <!-- td><input type="text" class="textClass" ng-model="model.selected.date" ng-disabled="true" /></td -->
+        <td><input type="text" class="textClass" ng-model="model.selected.cpu" /></td>
+        <td><input type="text" class="textClass" ng-model="model.selected.memory" /></td>
+        <td><input type="text" class="textClass" ng-model="model.selected.network" /></td>
+        <td><input type="text" class="textClass" ng-model="model.selected.diskSpace" /></td>
+        <td><input type="text" class="textClass" ng-model="model.selected.numOfUser" /></td>
+        <td><input type="text" class="textClass" ng-model="model.selected.noOfConn" /></td>
+		<td><input type="text" class="textClass" ng-model="model.selected.flaps" /></td>
+		<td class="gridStyle">
+			<select ng-model="model.selected.result" style="padding:4px;">
+				<option>Pass</option>
+				<option>Memory</option>
+				<option>System Faliure</option>
+				<option>CPU Memory</option>
+				<option>Memory Leak</option>
+				<option>Response</option>
+				<option>Connections</option>
+				<option>Disk Full</option>
+			</select>
+		</td>
+        <td style="width:100px;">
+			 <a ng-click="saveContact($index)">
+          		<img alt="" src="resources/images/correct.png" style="width:18px;">
+        	</a>
+			<a ng-click="reset()">
+          		<img alt="" src="resources/images/incorrect.png" style="width:18px;">
+        	</a>
+        </td>
+    </script>
+</div>

@@ -1,0 +1,15 @@
+{
+	"headcount" :{
+		"accuracy": "90"
+	},
+	"count" :[
+		{"name":"pass","count": "7","class" : "bk-success"},
+		{"name":"fail","count":"3","class" : "bk-danger"},
+		{"name":"slow","count": "4","class" : "bk-amber"},
+		{"name":"memory leak","count": "3","class" : "bk-dark"},
+		{"name":"disk full","count": "2","class" : "bk-brand"}
+	]	
+}
+
+  
+  
