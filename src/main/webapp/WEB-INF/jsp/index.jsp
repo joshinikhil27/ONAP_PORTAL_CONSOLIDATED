@@ -73,7 +73,7 @@
 <!--  <script src="resources/AAI/lib/d3.v3.min.js"></script>  -->
 <!--  <script src="resources/AAI/lib/d3.v3.min.js"></script> -->
 
-<!--  <script src="resources/AAI/templates/dndTree.js"></script>
+ <script src="resources/AAI/templates/dndTree.js"></script>
 
  <script src="resources/AAI/button_clicks/getCustomers.js"></script>
 
@@ -102,7 +102,7 @@
  <script src="resources/AAI/tables/specific_subscription_table.js"></script>
  <script src="resources/AAI/tables/specific_s_instance_table.js"></script>
  <script src="resources/AAI/tables/createRow.js"></script>
- <script src="resources/AAI/custjs.js"></script> -->
+ <script src="resources/AAI/custjs.js"></script>
     <style>
       .symbol {
 	    font-family: FontAwesome;
@@ -249,13 +249,13 @@
     <script src="resources/dist/js/sb-admin-2.js"></script>
     
     <script>
-		/* 	 var customer_ids = [];
+		 var customer_ids = [];
 			var demonstration_ids = [];
 			// GLOBAL array of customer ids.
 			var cust_subscriptions_ids = []; // // different structure than sigmajs array. This change in structure will be useful when more than one customers are there. 
 			var subscriptions_ids = [];
 			var inst_cust_subs_ids = [];
-			var response = {}; // GLOBAL variable to store the response of API calls. */
+			var response = {}; // GLOBAL variable to store the response of API calls. 
 			
 		</script>
 		
