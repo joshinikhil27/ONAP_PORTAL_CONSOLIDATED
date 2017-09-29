@@ -161,10 +161,10 @@
                             /input-group
                         </li> -->
                         <li>
-                            <a ui-sref="home"><img alt="" src="resources/images/Dashboard.png"> Dashboard</a>
+                            <a ui-sref="home"><img alt="" src="resources/images/Dashboard.png"> Home</a>
                         </li>
                          <li>
-                            <a href=""><i class="fa fa-edit fa-fw"></i> DCAE<span class="fa arrow"></span></a>
+                            <a href=""><img alt="" src="resources/images/DCAE.png"> DCAE<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a ui-sref="dashboard">Training VNF Data</a>
@@ -201,7 +201,7 @@
                             <a ui-sref="eventList"><img alt="" src="resources/images/VES.png"> VES</a>
                         </li>
                         <li>
-                            <a href="http://104.130.165.61:9005/"><i class="fa fa-edit fa-fw"></i>MSO</a>
+                            <a href="http://104.130.165.61:9005/"><img alt="" src="resources/images/MSO.png"> MSO</a>
                         </li>
                        <!--  <li>
                             <a href="http://10.10.221.64:8082/eventList"><i class="fa fa-edit fa-fw"></i> VES</a>
