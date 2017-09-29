@@ -58,4 +58,19 @@ app.directive('gridTable',function(){
             };
         }
     };
-})
+});
+app.app.directive('graphTable',function(){
+    return {
+        restrict : 'AE',
+        scope : {
+            tabledata : '=',
+            header : '=',
+            callfun : '&',
+            styleclass : '=',
+        },
+        templateUrl : 'resources/directives/graph-data.html',
+        link: function($scope, element, attrs) {
+           
+        }
+    };
+});
