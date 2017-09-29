@@ -101,8 +101,6 @@ app.controller('eventListCtrl',function($scope,$http,$rootScope, $modal){
 			$scope.imgModel  = data.response_body.image;
 			$scope.rawJson  = data.response_body.rawJson;
 			$scope.vesJson  = data.response_body.vesJson;
-			
-			alert('$scope.image '+$scope.image +'\n$scope.rawJson '+$scope.rawJson  +'\n$scope.vesJson '+$scope.vesJson);
 
 		}).error(function(data, status, headers, config) {
 			console.log('Error occurred '+data);
