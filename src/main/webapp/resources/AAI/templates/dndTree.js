@@ -26,8 +26,9 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*/
 
 function updateGraph(treeData){
+	
 // Get JSON data
-
+debugger;
 	//window.alert(JSON.stringify(treeData));
 
 	var check=0;
@@ -52,9 +53,9 @@ function updateGraph(treeData){
     var root;
 
     // size of the diagram
-    var viewerWidth =  $(document).width()/2;
+    var viewerWidth = $(document).width()/1.331;
 	
-    var viewerHeight =  $(document).height()/2;
+    var viewerHeight =  $(document).height()/1.8;
 
     var tree = d3.layout.tree()
         .size([viewerHeight, viewerWidth]);
@@ -182,10 +183,11 @@ function updateGraph(treeData){
     }
 
     // define the baseSvg, attaching a class for styling and the zoomListener
-	document.getElementById("tree-container").innerHTML="";
+	
+    document.getElementById("tree-container").innerHTML="";
     var baseSvg = d3.select("#tree-container").append("svg")
-        .attr("width",0)
-        .attr("height",0)
+        .attr("width",viewerWidth)
+        .attr("height",viewerHeight)
         .attr("class", "overlay")
         .call(zoomListener);
 
@@ -343,8 +345,8 @@ function updateGraph(treeData){
         scale = zoomListener.scale();
         x = -source.y0;
         y = -source.x0;
-        x =   viewerWidth / 2;
-        y =   viewerHeight / 2;
+        x =   viewerWidth / 4;
+        y =   viewerHeight / 3.5;
         d3.select('g').transition()
             .duration(duration)
             .attr("transform", "translate(" + x + "," + y + ")scale(" + scale + ")");
@@ -410,7 +412,7 @@ function updateGraph(treeData){
             }
         };
         childCount(0, root);
-        var newHeight = d3.max(levelWidth) * 25;// 25 pixels per line  
+        var newHeight = d3.max(levelWidth) * 20;// 25 pixels per line  
         tree = tree.size([newHeight, viewerWidth]);
 
         // Compute the new tree layout.
@@ -425,7 +427,7 @@ function updateGraph(treeData){
             // d.y = (d.depth * 500); //500px per level.
         });
 
-        // Update the nodes…
+        // Update the nodesï¿½
         node = svgGroup.selectAll("g.node")
             .data(nodes, function(d) {
                 return d.id || (d.id = ++i);
@@ -523,7 +525,7 @@ function updateGraph(treeData){
         nodeExit.select("text")
             .style("fill-opacity", 0);
 
-        // Update the links…
+        // Update the linksï¿½
         var link = svgGroup.selectAll("path.link")
             .data(links, function(d) {
                 return d.target.id;
