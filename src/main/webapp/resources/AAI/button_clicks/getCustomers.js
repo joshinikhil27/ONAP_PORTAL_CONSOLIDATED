@@ -1,12 +1,32 @@
 function getCustomers(){
+	
+	var x = document.getElementById('greport-container');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } /*else {
+        x.style.display = 'none';
+    }*/
+    var y = document.getElementById('report-line');
+    if (y.style.display === 'none') {
+        y.style.display = 'block';
+    } /*else {
+        y.style.display = 'none';
+    }*/
+    var z = document.getElementById('aai-greport');
+    if (z.style.display === 'none') {
+        z.style.display = 'block';
+    } /*else {
+        z.style.display = 'none';
+    }*/
      
-    var s1 = document.getElementsByName("txtsearch")[0].value;
+  var s1 = document.getElementsByName("txtsearch")[0].value;
 	
 	if( s1.length > 0 )
 		{
 	    
 		 onClick_Business("customers/customer/"+s1);	
 		 	var response_json=response;	
+		 	console.log(JSON.stringify(response));
 			customer_data = [];
 			for(var i=0;i<=1;i++){
     			customer_data.push(response_json["global-customer-id"]+"(customers)");
