@@ -1,6 +1,6 @@
 var app = angular.module('App',['nvd3ChartDirectives','ui.router','angularUtils.directives.dirPagination','ui.bootstrap']);
-//app.constant('http_url', 'http://104.130.165.61:8087/');
-app.constant('http_url', 'http://localhost:8087/');
+app.constant('http_url', 'http://104.130.165.61:8087/');
+//app.constant('http_url', 'http://localhost:8087/');
 app.run(function ($rootScope,$state, $stateParams) {
     /***** Code for change browser title  *****/
     $rootScope.$state = $state;
