@@ -1,0 +1,43 @@
+
+<style>
+    .textClass { width : 100%;}
+</style>
+<div>
+    <table class="table table-bordered">
+        <thead class="bg-primary">
+<!--             <th class="gridStyle text-center">date</th> -->
+            <th class="gridStyle text-center">cpu</th>
+            <th class="gridStyle text-center">Memory</th>
+            <th class="gridStyle text-center">Network</th>
+            <th class="gridStyle text-center">Disk Space</th>
+            <th class="gridStyle text-center">Users</th>
+            <th class="gridStyle text-center">Connections</th>
+            <th class="gridStyle text-center">flaps</th>
+        </thead>
+        <tbody>
+            <tr dir-paginate="contact in griddata | itemsPerPage:10" ng-include="getTemplate(contact)">
+            </tr>
+        </tbody>
+    </table>
+     <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="resources/directives/dirPagination.tpl.html"></dir-pagination-controls>
+    <script type="text/ng-template" id="display">
+        <!-- td>{{contact.date | date : longDate}}</td -->
+        <td>{{contact.cpu}}</td>
+        <td>{{contact.memory}}</td>
+        <td>{{contact.network}}</td>
+        <td>{{contact.diskSpace}}</td>
+        <td>{{contact.numOfUser}}</td>
+        <td>{{contact.noOfConn}}</td>
+		<td>{{contact.flaps}}</td>
+    </script>
+    <script type="text/ng-template" id="edit">
+        <!-- td><input type="text" class="textClass" ng-model="model.selected.date" ng-disabled="true" /></td -->
+        <td><input type="text" class="textClass" ng-model="model.selected.cpu" /></td>
+        <td><input type="text" class="textClass" ng-model="model.selected.memory" /></td>
+        <td><input type="text" class="textClass" ng-model="model.selected.network" /></td>
+        <td><input type="text" class="textClass" ng-model="model.selected.diskSpace" /></td>
+        <td><input type="text" class="textClass" ng-model="model.selected.numOfUser" /></td>
+        <td><input type="text" class="textClass" ng-model="model.selected.noOfConn" /></td>
+		<td><input type="text" class="textClass" ng-model="model.selected.flaps" /></td>
+    </script>
+</div>
