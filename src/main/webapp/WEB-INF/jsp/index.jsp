@@ -170,7 +170,7 @@
                                     <a ui-sref="dashboard">Training VNF Data</a>
                                 </li>
                                 <li>
-                                    <a ui-sref="importVNFdata">Import VNF Data</a>
+                                    <a ui-sref="importVNFdata">Load VNF Data</a>
                                 </li>
                                 <li>
                                     <a ui-sref="summary">Action Summary</a>
