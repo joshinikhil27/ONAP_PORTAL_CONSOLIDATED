@@ -1,0 +1,64 @@
+
+Customer Report
+RequestID					:e26ac5af-7687-11e7-985f-c8d3ffe7845b
+
+=======================================================================================
+Throughput Test Summary
+=======================================================================================
+
+Maximum rate of transmission without any error is 2.5Mbps
+	
+=======================================================================================
+Latency Test Summary
+=======================================================================================
+
+Average latency on the network is 2500 milliseconds.
+	
+=======================================================================================
+Frame Loss Test Summary
+=======================================================================================
+
+Frame loss is 86% at 1000Mbps and 74% at 900Mbps.
+
+=======================================================================================
+Health check Response :
+=======================================================================================
+27-9-2017 15:38:00
+
+CPU Utilization : 35%
+
+Memory Utilization : 85%
+
+	Total Memory : 8GB Free Memory : 6.4 GB
+
+	            total       used       free     shared    buffers     cached
+	Mem:          7976       6459       1517          0        865       2248
+	-/+ buffers/cache:       3344       4631
+	Swap:         1951          0       1951
+
+Disk Utilization : 24%
+
+	Filesystem            kbytes    used   avail capacity  Mounted on
+	/dev/dsk/c0t3d0s0     192807   40231  133296    24%    / 
+
+=================================
+Health check Report
+ :
+=================================
+27-9-2017 15:38:00
+
+CPU Utilization : 35%
+
+Memory Utilization : 85%
+
+	Total Memory : 8GB Free Memory : 6.4 GB
+
+	            total       used       free     shared    buffers     cached
+	Mem:          7976       6459       1517          0        865       2248
+	-/+ buffers/cache:       3344       4631
+	Swap:         1951          0       1951
+
+Disk Utilization : 24%
+
+	Filesystem            kbytes    used   avail capacity  Mounted on
+	/dev/dsk/c0t3d0s0     192807   40231  133296    24%    / 

@@ -1,0 +1,20 @@
+=================================
+Health check Response :
+=================================
+27-9-2017 15:38:00
+
+CPU Utilization : 35%
+
+Memory Utilization : 85%
+
+	Total Memory : 8GB Free Memory : 6.4 GB
+
+	            total       used       free     shared    buffers     cached
+	Mem:          7976       6459       1517          0        865       2248
+	-/+ buffers/cache:       3344       4631
+	Swap:         1951          0       1951
+
+Disk Utilization : 24%
+
+	Filesystem            kbytes    used   avail capacity  Mounted on
+	/dev/dsk/c0t3d0s0     192807   40231  133296    24%    / 
