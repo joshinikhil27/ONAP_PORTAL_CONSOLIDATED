@@ -1,4 +1,5 @@
 app.controller('persistCtrl',['http_url','$scope','$http','$filter','$rootScope','$state','$timeout',function(http_url,$scope,$http,$filter,$rootScope,$state,$timeout){
+	$scope.showLoading = true;  
 	$scope.currentPage = 1;
 	$scope.pageSize = 10;
 	$scope.dataNew = [];
@@ -231,8 +232,8 @@ function filterDate(data,type,grpkey,orgdata,yAxisName){
         
         $scope.temTable=[];
         var i=1;
-        debugger;
         $scope.temTable=angular.copy(orgdata);
+        $scope.showLoading = false; 
 //        angular.forEach(orgdata,function(value,key){
 //        	angular.forEach(newdata,function(value1,key1){
 //        		//console.log('DATA H '+JSON.stringify(i +' --- '+value1._id.counter +' ------------- '+value1._id.counter));
@@ -444,7 +445,6 @@ var div = d3.select("body").append("div")
         //$state.go('restartinfo');
     }
    function SaveAuditData(){
-	   console.log(JSON.stringify($scope.nodedata));
 		   $http({
 				url : http_url+'demo/onap/SaveAuditInfo',
 				contentType : "application/json",
@@ -466,12 +466,12 @@ var div = d3.select("body").append("div")
                 modaldata : '=',
                 btnclick : '&',
             },
-            template : '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">'
+            template : '<div class="modal fade persistmodal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">'
                 + '<div class="modal-dialog modal-md" role="document">'
                 + '<div class="modal-content">'
                 + '<div class="modal-body"> '
                 + '<div style="padding: 20px 24px;" class="col-md-10"><div id="my1" style="text-transform: capitalize;"></div><h4 ng-click="btnclick()" style="color:#f49505;cursor : pointer">Restart VM | Rebuild VM | Raise Ticket</h4></div>'
-                + '<div style="padding: 2px 46px;" class="col-md-2"><button type="button" class="btn btn-secondary" data-dismiss="modal">X</button></div>'
+                + '<div style="padding: 2px 46px;" class="col-md-2 persistclosebtn"><button type="button" class="btn btn-secondary" data-dismiss="modal">X</button></div>'
                 + '</div>'
                 + '<div class="modal-footer">'
                 + ''
