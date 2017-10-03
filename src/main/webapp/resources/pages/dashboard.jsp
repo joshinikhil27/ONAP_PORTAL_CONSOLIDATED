@@ -20,7 +20,7 @@
 					<!-- /.panel-heading -->
 					<div class="panel-body">
 						<grid-table griddata="tabledata"></grid-table>
-						<!--                             <graph-table tabledata="tabledata" callfun="saveContact(id)" header="header" styleclass="temp" callfun="getdata(type,calltype)"></graph-table> -->
+						<div class="loading" ng-show="showLoading"></div>
 					</div>
 					<!-- /.panel-body -->
 				</div>
