@@ -11,7 +11,7 @@
 		</header>
 		<div class="row page-breadcrumb">
                 <div class="col-lg-12">
-                    <span>SDNC</span>
+                    <span>SDNC ></span>
                     <strong>Create /Update Device Configuration</strong>
                 </div>
                 <!-- /.col-lg-12 -->
@@ -29,7 +29,7 @@
             
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 presistContainer">
                     <div class="panel panel-default panelBodyBg">
                         <div class="panel-heading bg-primary">
                             <i class="fa fa-bar-chart-o fa-fw"></i> Upload JSON File
@@ -39,16 +39,49 @@
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                         <!-- upload Window -->
-	                       	<div class="col col-lg-6 page-search-button">
+	                       	<div ng-show="!hideUploadMenu" class="col col-lg-6 page-search-button">
 	                        	<span>Please select a single file to be uploaded </span><br> <br>
-											<form name="uploadFileForm" method="post"
+											<form ng-disabled ="uploadSuccessfull" class="file-upload" name="uploadFileForm" method="post"
 												enctype="multipart/form-data">
-												<input type="file" id="files" name="files[]" size="50" /> <br />
+												
+   												 <label for="files" class="btn file-upload__label">Choose a File</label>
+   												 <input id="files" ng-disabled ="uploadSuccessfull" class="file-upload__input" type="file" name="files[]">
+												
+												<!-- <input class="btn btn-primary" type="file" id="files" name="files[]" size="50" /> <br /> -->
 												<br>
 												<br> <input class="btn btn-primary" ng-disabled ="uploadSuccessfull" type="submit" value="Submit"
 													ng-click="test(json)" />
 											</form>
 							</div>
+							<!-- text area -->
+							<div ng-show="hideUploadMenu" class="col col-lg-6 page-search-button">
+	                    	    	<div ng-if="applyConfig" class="form-group">
+  										<label for="config">Configuration</label>
+ 										 <textarea class="form-control" rows="5" id="config">{{configString}}</textarea>
+									</div>
+									<div ng-if="!applyConfig" class="configModal">
+										<input class="btn btn-success marginBottom" ng-click="openModal1()" value="Device Reachability test"/>
+										<input class="btn btn-success marginBottom" ng-click="openModal2()" value="Device Health test"/>
+										<input class="btn btn-success marginBottom" ng-click="openModal3()" value="Application Test"/>
+										<input class="btn btn-success " ng-click="openModal4()" value= "Customer Report"/>
+											<div class="modal fade" id="configModal" role="dialog">
+										    <div class="modal-dialog modal-sm">
+										      <div class="modal-content">
+										        	<div class="modal-header">
+										       		   <button type="button" class="close" data-dismiss="modal">&times;</button>
+										      		    <h4 class="modal-title text-success">Configuration</h4>
+										      	 	 </div>
+											      	  <div class="modal-body">
+											      		  <div style="padding:15px;">
+											       		   <p>{{testData}}</p>
+											      		  </div>
+											       	 </div>
+										      </div>
+										    </div>
+	  										</div> 
+									</div>
+							</div>
+							<!-- text area -->
 						<!-- upload Window -->
 						<!-- Status Info -->
 							<div ng-if="uploadSuccessfull" class="col col-lg-6 page-search-button">
