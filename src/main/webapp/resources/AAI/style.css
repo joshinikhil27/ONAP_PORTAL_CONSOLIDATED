@@ -19,8 +19,8 @@
    
   .link {
     fill: none;
-    stroke: #ccc;
-    stroke-width: 1.5px;
+    stroke: #000;
+    stroke-width: 0.8px;
   }
 
   .templink {
@@ -38,12 +38,27 @@
   }
   
 div.container {
-    width: 100%;
-    height:100%
+    width: 50%;
+    height:50%
     border: 1px solid gray;
 }
+#newCust #Customers{
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
 
-header{
+
+#newCust #Generic_vnfs{
+  border: 1px solid #ddd;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;	
+	
+	
+}
+/* header{
     padding: 1em;
 	 background-color:#D0ECE7;
   
@@ -87,4 +102,4 @@ nav {
   tr
   {
    border: 1px solid black;
-  }
+  }*/
