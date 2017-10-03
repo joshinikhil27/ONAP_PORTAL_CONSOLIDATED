@@ -1,5 +1,6 @@
 app.controller('importVNFCtrl',['http_url','$scope','$http','$filter','$rootScope','$state',function(http_url,$scope,$http,$filter,$rootScope,$state){
-	$scope.showRunML = true;  
+	$scope.showRunML = true;
+	$scope.showLoading = false;  
 	$scope.showImportVNF = false;
 	$scope.tabledata = []
 	  ,$scope.currentPage = 1
@@ -13,8 +14,10 @@ app.controller('importVNFCtrl',['http_url','$scope','$http','$filter','$rootScop
 	    });
 	}
 	$scope.importVNFdata = function(){
-		$http.put(http_url+'demo/onap/ListRawData')
+		$scope.showLoading = true;
+		$http.put(http_url+'demo/onap/AdditionalListRawData')
 	       .then(function(res){
+	    	   $scope.showLoading = false;
 	    	   $scope.tabledata = res.data;
 	    	   $scope.showRunML = false;
 	    	   $scope.showImportVNF = true;
