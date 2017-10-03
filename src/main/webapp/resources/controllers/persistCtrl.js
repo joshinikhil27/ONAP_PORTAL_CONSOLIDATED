@@ -4,7 +4,7 @@ app.controller('persistCtrl',['http_url','$scope','$http','$filter','$rootScope'
 	$scope.pageSize = 10;
 	$scope.dataNew = [];
 	$scope.colorCode = {'pass':'mlpasscolor','fail':'mlfailcolor','slow':'mlslowcolor','memoryLeak':'bk-dark','diskFull':'bk-brand','systemFaliure':'bk-blue'};
-	$scope.custColor = {'pass':'#006600','fail':'#b20000','slow':'#e6ac00','memoryLeak':'#222','diskFull':'#37a6c4','systemFaliure':'#0010ce'};
+	$scope.custColor = {'pass':'#006600','fail':'#ff4800','slow':'#e6ac00','memoryLeak':'#222','diskFull':'#37a6c4','systemFaliure':'#0010ce'};
 	$scope.custFillColor = {'pass':'#99ff99','fail':'#ff9999','slow':'#ffd24d','memoryLeak':'#222','diskFull':'#37a6c4','systemFaliure':'#0010ce'};
 	
     function StatusCount(){
