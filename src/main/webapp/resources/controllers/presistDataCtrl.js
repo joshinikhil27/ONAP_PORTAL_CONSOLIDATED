@@ -8,7 +8,7 @@ app.controller('presistDataCtrl',function($scope,$http,$filter,$rootScope,$state
 	$scope.finalTaskFail=false;*/
 	//$(".newoverlay").hide();
 	
-
+	$scope.hideUploadMenu = false;
 	$scope.uploadSuccessfull = false;
 	$scope.index = 1;
 	$scope.modalLine1 = '';
@@ -169,6 +169,11 @@ app.controller('presistDataCtrl',function($scope,$http,$filter,$rootScope,$state
  	
  	$scope.firstTaskCompletion=function()
 	{  
+ 		 $scope.configString=$scope.json.variables.deviceConfigurationJson.value;
+ 		/* $http.get('resources/data/data.txt')
+	     .success(function(data) {
+	    	
+	     })*/
 	   
  		
  		/*var d = document.getElementById($scope.id);
@@ -194,8 +199,11 @@ app.controller('presistDataCtrl',function($scope,$http,$filter,$rootScope,$state
 			 //$(".newoverlay").hide();
 				/*$("#updateDeviceSuccess").modal('show');*/
 				    var d = document.getElementById($scope.index);
-				 	d.className = "previous visited";				 	
-					$scope.index = $scope.index + 1 ;
+				    $scope.applyConfig = true;
+				    $scope.hideUploadMenu = true;
+				    d.className = "previous visited";
+				 	$scope.index = $scope.index + 1 ;
+							
 					d = document.getElementById('img_'+$scope.index).src="resources/images/Apply_config.png";
 			 		var d = document.getElementById($scope.index);
 			 		d.className = "active";
@@ -319,6 +327,7 @@ app.controller('presistDataCtrl',function($scope,$http,$filter,$rootScope,$state
 					
 				})
 			});
+			$scope.applyConfig = false;
 			var d = document.getElementById($scope.index);
 			d.className = "previous visited";
 			d = document.getElementById('img_'+$scope.index).src="resources/images/Apply_config.png";
@@ -423,7 +432,7 @@ app.controller('presistDataCtrl',function($scope,$http,$filter,$rootScope,$state
 				d = document.getElementById('img_'+$scope.index).src="resources/images/Apply_config.png";
 		 		var d = document.getElementById($scope.index);
 		 		d.className = "active";*/
-		 		$scope.modalLine1 = 'PreTest Finished.';
+		 		$scope.modalLine1 = 'PreTest Running.';
 				$scope.modalLine2 = 'Click NEXT to know the results of the Pre-Test';
 				$scope.button1 = 'Next';
 				$scope.modalId = 'preTestFinished';
@@ -564,6 +573,43 @@ app.controller('presistDataCtrl',function($scope,$http,$filter,$rootScope,$state
 		$(".cockpitWindow").hide();
 		//$("#"+id).modal('show');	
 	}
+     $scope.openModal1=function(){
+    	 $http.get('resources/data/ConnectivityCheckReport.txt')
+	     .success(function(data) {
+	    	 $scope.testData=data;
+    	 $("#configModal").modal('show');
+	    	
+	     })
+     }
+     
+     $scope.openModal2=function(){
+    	 $http.get('resources/data/HealthCheckReport.txt')
+	     .success(function(data) {
+	    	 $scope.testData=data;
+    	 $("#configModal").modal('show');
+	    	
+	     })
+     }
+     
+     $scope.openModal3=function(){
+    	 $http.get('resources/data/ThroughputTestReport.txt')
+	     .success(function(data) {
+	    	 $scope.testData=data;
+    	 $("#configModal").modal('show');
+	    	
+	     })
+     }
+     
+     $scope.openModal4=function(){
+    	 $http.get('resources/data/CustomerReport.txt')
+	     .success(function(data) {
+	    	 $scope.testData=data;
+    	 $("#configModal").modal('show');
+	    	
+	     })
+     }
+     
+     
      
      
 });
