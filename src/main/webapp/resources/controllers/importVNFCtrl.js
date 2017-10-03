@@ -8,7 +8,7 @@ app.controller('importVNFCtrl',['http_url','$scope','$http','$filter','$rootScop
 	  ,$scope.maxSize = 5;
 	 
 	$scope.RunML=function (){ 
-		$http.put(http_url+'demo/onap/TriggerPrediction')
+		$http.put(http_url+'demo/onap/TriggerPredictionVnf')
 	       .then(function(res){
 	   		$state.go('persistedData');
 	    });
