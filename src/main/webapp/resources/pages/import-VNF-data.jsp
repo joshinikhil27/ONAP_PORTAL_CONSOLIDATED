@@ -20,7 +20,7 @@
 					</div>
 					<!-- /.panel-heading -->
 					<div class="panel-body">
-						<grid-table griddata="tabledata"></grid-table>
+						<non-editable-grid griddata="tabledata"></non-editable-grid>
 						<div class="loading" ng-show="showLoading"></div>
 						<div class="col-md-12 text-center" ng-if="tabledata == ''">No Record Found</div>
 					</div>
