@@ -448,10 +448,10 @@ a:focus, a:hover {
 	top: -50%;
 	left: 20%;
 }
-#vesModal .jsondata { 
-	word-wrap: break-word;    
-	overflow-y: scroll;    
-	height: 150px;    
+#vesModal .jsondata {
+	word-wrap: break-word;
+	overflow-y: scroll; 
+	height: 150px;
 	padding: 15px;
 }
 /*	Modal Style	*/
