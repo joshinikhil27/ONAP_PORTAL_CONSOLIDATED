@@ -30,6 +30,7 @@
 							    	<td class="gridStyle text-center">00{{$index+1}}</td>
 							    </tr>
 							</table>
+							<div class="loading" ng-show="showLoading"></div>
 							<div class="col-md-12 text-center" ng-if="summary == ''">No Record Found</div>
                         </div>
                         <!-- /.panel-body -->
