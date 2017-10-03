@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.att.nsa.cambria.test.clients.CustomEvent;
 import com.microservices.dao.model.VendorEvent;
-
+import com.att.nsa.cambria.test.clients.CustomCambriaRunner;
 @SpringBootApplication
 public class SpringBootWebApplication {
 
@@ -26,6 +26,7 @@ public class SpringBootWebApplication {
 	
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(SpringBootWebApplication.class, args);
+		 CustomCambriaRunner.getCustomCambriaRunnerInstance.startProcessing();
 		fillProtocolToImgMap();
 	}
 	private static void fillProtocolToImgMap() {
