@@ -296,7 +296,7 @@ a:focus, a:hover {
 	color: #8fcd50;
 }
 .mlslowcolor {
-	color: #36b4dc;
+	color: #ffc200;
 }
 .mlkey {
 	font-size: 28px;	
@@ -717,4 +717,20 @@ display: none;
 	padding-top: 5px;
 }
 /* added by vishal Home */
-
+/* added by vishal Persist */
+.persistmodal .persistclosebtn {
+	text-align: right;
+	padding: 0 !important;
+}
+.persistmodal .persistclosebtn button {
+	background: none;
+}
+.persistmodal .persistclosebtn .btn:active {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.persistmodal .persistclosebtn .btn:active:focus {
+	outline: 0;
+	outline-offset: 0;
+}
+/* added by vishal Persist */
