@@ -137,6 +137,7 @@ div.tooltip {
 			<div class="panel-body">
 				<graph-table tabledata="tabledata" header="header" styleclass="temp"
 					callfun="getdata(type,calltype)"></graph-table>
+					<div class="loading" ng-show="showLoading"></div>
 			</div>
 		</div>
 	</div>
@@ -261,7 +262,7 @@ div.tooltip {
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-body">
-				<div class="loading"></div>
+				<div class="loadingModal"></div>
 			</div>
 		</div>
 	</div>
