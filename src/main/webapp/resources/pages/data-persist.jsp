@@ -99,7 +99,7 @@ div.tooltip {
 						<div class="panel-body text-light">
 							<div class="stat-panel text-right">
 								<div class="stat-panel-number h1 mlkey {{colorCode[value]}} ">{{key}} </div>
-								<div class="stat-panel-title text-uppercase {{colorCode[value]}}">{{(value == 'fail') ? 'predicted failures' : (value == 'slow')? 'predicted congection' : 'No service impact' }}</div>
+								<div class="stat-panel-title text-uppercase {{colorCode[value]}}">{{(value == 'fail') ? 'predicted failures' : (value == 'slow')? 'predicted congestion' : 'No service impact' }}</div>
 							</div>
 						</div>
 					</div>
