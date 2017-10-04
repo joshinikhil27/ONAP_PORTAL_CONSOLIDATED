@@ -102,7 +102,7 @@ $scope.getCount = function(count,name){
     	$scope.subTitleBlock = {"Service Faliure":"serviceFaliure","Disk Full":"diskFull","Memory Leak" : "memoryLeak"};
     }else if($scope.name == 'slow'){
     	$scope.subBlock = true;
-    	$scope.subTitleBlock = {"High Memory":"highMemory","Cpu Memory":"cpuMemory","Response" : "response","Connections":"connections"};
+    	$scope.subTitleBlock = {"High Memory":"highMemory","Cpu Memory":"cpuMemory","Slow Response" : "response","Connections":"connections"};
     }else{
     	$scope.subTitleBlock = [];
     	$scope.subBlock = false;
