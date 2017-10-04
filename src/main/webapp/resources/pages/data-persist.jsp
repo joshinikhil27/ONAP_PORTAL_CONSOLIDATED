@@ -106,7 +106,7 @@ div.tooltip {
 				</a>
 			</div>
 		</div>
-		<div class="col-lg-3" >
+		<div class="col-lg-3 padding-zero" >
 			<div class="col-md-12" ng-show="subBlock"> 
 				<a href="" >
 					<div class="panel panel-default">
