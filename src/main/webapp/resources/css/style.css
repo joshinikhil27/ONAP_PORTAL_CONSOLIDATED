@@ -331,7 +331,7 @@ a:focus, a:hover {
 .subblock-text p {
 	color: red;
 }
-<<<<<<< HEAD
+
 .ml-page-search-button .btn-primary, .ml-page-search-button .btn-primary:active:hover {
 	background-color: #ddd !important;
     border-color: #ddd !important;
@@ -351,8 +351,6 @@ a:focus, a:hover {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-=======
->>>>>>> 8edf9563899a8745b9f02a76a2ccba6b3f92a0f6
 /*	ML Page Level Style	*/
 
 /*	Modal Style	*/
