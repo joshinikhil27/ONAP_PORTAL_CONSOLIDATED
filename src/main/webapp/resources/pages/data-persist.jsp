@@ -220,7 +220,7 @@ div.tooltip {
 					<div class="col-lg-4">
 						<div class="panel panel-info">
 							<div class="panel-heading panel1">
-								<span class="pull-left panelheading1">Number Of Users Analysis </span>
+								<span class="pull-left panelheading1">Number Of User Analysis </span>
 								<div class="clearfix"></div>
 							</div>
 							<div class="panel-body">
