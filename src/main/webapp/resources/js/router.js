@@ -4,7 +4,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	    .state('home', {
 	        url: '/home',
 	        templateUrl: 'resources/pages/home.jsp',
-	        data : {pageTitle : 'Dashboard'}
+	        data : {pageTitle : 'Home'}
 	    })
         .state('dashboard', {
             url: '/Training-VNF',
@@ -22,7 +22,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/Import-VNF-Data',
             templateUrl: 'resources/pages/import-VNF-data.jsp',
             controller : 'importVNFCtrl',
-            data : {pageTitle : 'Import VNF Data'}
+            data : {pageTitle : 'Load VNF Data'}
         })
         .state('aandai', {
             url: '/aandai',
