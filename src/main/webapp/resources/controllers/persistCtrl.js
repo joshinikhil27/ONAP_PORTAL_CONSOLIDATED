@@ -5,7 +5,7 @@ app.controller('persistCtrl',['http_url','$scope','$http','$filter','$rootScope'
 	$scope.dataNew = [];
 	$scope.colorCode = {'pass':'mlpasscolor','fail':'mlfailcolor','slow':'mlslowcolor','memoryLeak':'bk-dark','diskFull':'bk-brand','systemFaliure':'bk-blue'};
 	$scope.custColor = {'pass':'#006600','fail':'#ff4800','slow':'#e6ac00','memoryLeak':'#222','diskFull':'#37a6c4','systemFaliure':'#0010ce'};
-	$scope.custFillColor = {'pass':'#99ff99','fail':'#ff9999','slow':'#ffd24d','memoryLeak':'#222','diskFull':'#37a6c4','systemFaliure':'#0010ce'};
+	$scope.custFillColor = {'pass':'#99ff99','fail':'#ff7f4d','slow':'#ffd24d','memoryLeak':'#222','diskFull':'#37a6c4','systemFaliure':'#0010ce'};
 	
     function StatusCount(){
         $http.put(http_url+'demo/onap/ListProcessedData')
@@ -68,7 +68,9 @@ $scope.charttype = {
 $scope.networktype = {
     selected : "All"
 }
+
 function checkboxFunctionality(type,calltype){
+	type = type - 1;
     /* Below code for selected grid data highlited */
     if(calltype == 1){
         $scope.temp = [];
@@ -343,7 +345,7 @@ var div = d3.select("body").append("div")
         	  }else if($scope.name == 'slow'){
         		  return 'area3';
         	  }
-        	  return $scope.custFillColor[$scope.name]
+        	  return $scope.custFillColor[$scope.name] 
           })
            .attr("d", function(d,i) { 
                   return area(d.values); 
@@ -397,16 +399,39 @@ var div = d3.select("body").append("div")
             }
         })
         .on('click',function(d,i){ 
-            $scope.modaldata = angular.copy($scope.tabledata[i]);
-            return $scope.modalPopup($scope.modaldata,i);
+        	if($scope.selectedDate.length > 0){
+                if($scope.selectedDate.indexOf(i) === -1){
+                	
+                }else{
+                    $scope.modaldata = angular.copy($scope.tabledata[i]);
+                    return $scope.modalPopup($scope.modaldata,i);
+                }
+            }else{
+            	$scope.modaldata = angular.copy($scope.tabledata[i]);
+                return $scope.modalPopup($scope.modaldata,i);
+            }
         })
         .on('mouseover',function(d,i){
-            div.transition()        
+        	if($scope.selectedDate.length > 0){
+                if($scope.selectedDate.indexOf(i) === -1){
+                	
+                }else{
+                    div.transition()        
+                    .duration(200)      
+                    .style("opacity", .9);      
+                	div.html($scope.tabledata[i][yAxisName])    
+                    .style("left", (d3.event.pageX) + "px")     
+                    .style("top", (d3.event.pageY - 34) + "px");
+                }
+            }else{
+            	div.transition()        
                 .duration(200)      
                 .style("opacity", .9);      
-            div.html($scope.tabledata[i][yAxisName])    
+            	div.html($scope.tabledata[i][yAxisName])    
                 .style("left", (d3.event.pageX) + "px")     
                 .style("top", (d3.event.pageY - 34) + "px");
+            }
+            
         })
         .on('mouseout',function(){
             div.transition()        
@@ -441,8 +466,6 @@ var div = d3.select("body").append("div")
         $('#myModal').modal('hide');
         $('#myModal1').modal('show');
         $timeout( function(){ $('#myModal1').modal('hide'); }, 2000);
-        
-        //$state.go('restartinfo');
     }
    function SaveAuditData(){
 		   $http({
