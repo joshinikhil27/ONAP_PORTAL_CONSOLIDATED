@@ -574,15 +574,17 @@ app.controller('presistDataCtrl',function($scope,$http,$filter,$rootScope,$state
 		//$("#"+id).modal('show');	
 	}
      $scope.openModal1=function(){
-    	 $http.get('resources/data/ConnectivityCheckReport.txt')
+    	 /*$http.get('resources/images/preTestResults.gif')
 	     .success(function(data) {
 	    	 $scope.testData=data;
     	 $("#configModal").modal('show');
 	    	
-	     })
+	     })*/
+	     $scope.testData='resources/images/preTestResults.gif';
+	     $("#configModal").modal('show');
      }
      
-     $scope.openModal2=function(){
+     /*$scope.openModal2=function(){
     	 $http.get('resources/data/HealthCheckReport.txt')
 	     .success(function(data) {
 	    	 $scope.testData=data;
@@ -607,6 +609,11 @@ app.controller('presistDataCtrl',function($scope,$http,$filter,$rootScope,$state
     	 $("#configModal").modal('show');
 	    	
 	     })
+     }*/
+     $scope.openModal5=function(){
+	    	 $scope.testData=$scope.configString;
+	    	 console.log("UAUSUSUA"+$scope.testData)
+    	 $("#applyConfigModal").modal('show');
      }
      
      
