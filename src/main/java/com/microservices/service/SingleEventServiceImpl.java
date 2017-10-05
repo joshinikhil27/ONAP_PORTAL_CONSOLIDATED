@@ -184,7 +184,8 @@ public class SingleEventServiceImpl implements ISingleEventService {
         Date dt=getDate(date,protocol);
         
         VendorEvent event=new VendorEvent(Long.valueOf(eventId), dt, vendorName, protocol);
-			return event;
+	event.setEventSourceName("CSR1000v");		
+		return event;
 	}
 
 	private Date getDate(String date, String protocol) 
