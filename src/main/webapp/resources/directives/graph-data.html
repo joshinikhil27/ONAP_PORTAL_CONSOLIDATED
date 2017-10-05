@@ -25,7 +25,7 @@
         <td ng-hide="!data.flaps">{{data.flaps}}</td>
         <td class="gridStyle" ng-hide="!data.result">{{data.prediction}}</td>
         <td>
-            <div ng-class="{'imageUnCheck' : (!styleclass[$index]),'imageCheck' : (styleclass[$index])}"  ng-click="callfun({type : $index , calltype : 1})"></div>
+            <div ng-class="{'imageUnCheck' : (!styleclass[$index + serial - 1]),'imageCheck' : (styleclass[$index + serial - 1])}"  ng-click="callfun({type : $index + serial , calltype : 1})"></div>
         </td>
     </tr>
 </table>
