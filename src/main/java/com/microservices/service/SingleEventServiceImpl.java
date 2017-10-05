@@ -255,7 +255,7 @@ public class SingleEventServiceImpl implements ISingleEventService {
 				if(String.valueOf(e.getEventID()).equals(eventID))
 				{
 					String vesJson=e.getEventText();
-					topicWiseObjListMap.put("vesJson", rawJson);			
+					topicWiseObjListMap.put("vesJson", vesJson);			
 				}
 			}
 		}
