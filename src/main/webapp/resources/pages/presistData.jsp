@@ -56,15 +56,7 @@
 							<!-- text area -->
 							<div ng-show="hideUploadMenu" class="col col-lg-6 page-search-button">
 	                    	    	<div ng-if="applyConfig" class="form-group">
-  										<label for="config">Configuration</label>
- 										 <textarea class="form-control" rows="5" id="config">{{configString}}</textarea>
-									</div>
-									<div ng-if="!applyConfig" class="configModal">
-										<input class="btn btn-success marginBottom" ng-click="openModal1()" value="Device Reachability test"/>
-										<input class="btn btn-success marginBottom" ng-click="openModal2()" value="Device Health test"/>
-										<input class="btn btn-success marginBottom" ng-click="openModal3()" value="Application Test"/>
-										<input class="btn btn-success " ng-click="openModal4()" value= "Customer Report"/>
-											<div class="modal fade" id="configModal" role="dialog">
+  										<div class="modal fade" id="applyConfigModal" role="dialog">
 										    <div class="modal-dialog modal-sm">
 										      <div class="modal-content">
 										        	<div class="modal-header">
@@ -74,6 +66,28 @@
 											      	  <div class="modal-body">
 											      		  <div style="padding:15px;">
 											       		   <p>{{testData}}</p>
+											      		  </div>
+											       	 </div>
+										      </div>
+										    </div>
+	  										</div> 
+									</div>
+									<div ng-if="!applyConfig" class="configModal">
+										<input class="btn btn-success marginBottom" ng-click="openModal1()" value="Pre Test Results"/>
+										<!-- <input class="btn btn-success marginBottom" ng-click="openModal2()" value="Device Health test"/>
+										<input class="btn btn-success marginBottom" ng-click="openModal3()" value="SLA Test"/>
+										<input class="btn btn-success " ng-click="openModal4()" value= "Summary Report"/> -->
+											<div class="modal fade" id="configModal" role="dialog">
+										    <div class="modal-dialog modal-sm">
+										      <div class="modal-content">
+										        	<div class="modal-header">
+										       		   <button type="button" class="close" data-dismiss="modal">&times;</button>
+										      		    <h4 class="modal-title text-success">Pre Test Results</h4>
+										      	 	 </div>
+											      	  <div class="modal-body">
+											      		  <div style="padding:15px;">
+											       		   <!-- <p>{{testData}}</p> -->
+											       		   <img ng-src="{{testData}}" />
 											      		  </div>
 											       	 </div>
 										      </div>
@@ -114,12 +128,12 @@
 				    
 				    <li id="2" class=" ">
 					    <img class="statusImg" id="img_2" src="resources/images/Prepare_config01.png">
-					    <div id="failedDiv" ng-class="failedFLow?'statusTxtFailed':'statusTxt'">Prepare Configuration</div>
+					    <div id="failedDiv" ng-class="failedFLow?'statusTxtFailed':'statusTxt'">Update Configuration</div>
 				    </li>
 				    
-				    <li id="3" class=" ">
-				   		 <img class="statusImg" id="img_3" src="resources/images/Apply_config_01.png">
-				   		 <div id="failedDiv" ng-class="failedFLow?'statusTxtFailed':'statusTxt'">Apply Configuartion</div>
+				    <li id="3" class=" " >
+				   		 <img class="statusImg" id="img_3" src="resources/images/Apply_config_01.png" ng-click="openModal5()" >
+				   		 <div id="failedDiv" ng-class="failedFLow?'statusTxtFailed':'statusTxt'" ng-click="openModal5()" >Apply Configuartion</div>
 				    </li>
 				    
 				    <li id="4" class="">
