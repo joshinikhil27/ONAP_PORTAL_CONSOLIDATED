@@ -118,6 +118,10 @@ ul.checkout-bar li {
  
 }
 
+ul.checkout-bar li #img_3 {
+	cursor: pointer;
+}
+
 
 ul.checkout-bar li:nth-child(2):before {
     content: "2";
@@ -450,9 +454,12 @@ ul.checkout-bar li:nth-child(3):before {
 	border-bottom: 1px solid #ddd;
 } */
 /* added by Abinandh */
-#configModal .modal-content {
+#configModal .modal-content,#applyConfigModal .modal-content {
 	width: 500px;
 	max-height: 350px;
 	overflow: auto;
 	word-wrap: break-word;
+}
+#configModal .modal-content {
+	width: 612px !important;
 }
