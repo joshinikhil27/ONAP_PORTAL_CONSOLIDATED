@@ -10,6 +10,14 @@
             <div class="row margin-top-20">
                 <div class="col-lg-12 page-table">
                     <div class="panel panel-default">
+			    <div class="col-md-12 section-header margin-bottom-20">
+                    <img alt="" src="resources/images/ActionSummary_icon.png"> <span>Action Summary</span>
+                    </div>
+                    <div class="col-md-12 margin-bottom-5 text-right actionsummary">
+                    <img alt="" src="resources/images/email.png">
+                    <img alt="" src="resources/images/Print.png">
+                    <img alt="" src="resources/images/Exel.png">
+                    </div>
                         <!-- <div class="panel-heading panel1">
                             <span class="pull-left panelheading1"><i class="fa fa-bar-chart-o fa-fw"></i> Data Analysis </span>
                             
