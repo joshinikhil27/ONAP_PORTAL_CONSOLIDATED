@@ -195,6 +195,9 @@ a:focus, a:hover {
 .margin-top-300 {
 	margin-top: 300px;
 }
+.border-right-dotted {
+	border-right: 1px dotted #d24d57;
+}
 /*	Common	*/
 
 /*	VES Page Level Style	*/
@@ -722,7 +725,15 @@ display: none;
 /* added by vishal Home */
 /* added by vishal Persist */
 .persistmodal .persistclosebtn {
-	text-align: right;
+	background: #d24d57;
+	color: #ffffff;
+	padding: 10px;
+}
+.persistmodal .persistclosebtn h4 {
+	display: inline;
+}
+.persistmodal .persistclosebtn button {
+	float: right;
 	padding: 0 !important;
 }
 .persistmodal .persistclosebtn button {
