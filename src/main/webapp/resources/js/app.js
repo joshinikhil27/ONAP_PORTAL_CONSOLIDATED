@@ -56,6 +56,9 @@ app.directive('gridTable',function(){
             $scope.reset = function () {
                 $scope.model.selected = {};
             };
+	    $scope.pageChangeHandler = function(newPageNumber){
+            	$scope.serial = newPageNumber * 10 - 9;
+            }
         }
     };
 });
@@ -121,8 +124,10 @@ app.directive('graphTable',function(){
             styleclass : '=',
         },
         templateUrl : 'resources/directives/graph-data.html',
-        link: function($scope, element, attrs) {
-           
+        controller : function($scope,$http){
+        	$scope.pageChangeHandler = function(newPageNumber){
+            	$scope.serial = newPageNumber * 10 - 9;
+            }
         }
     };
 });
