@@ -270,7 +270,10 @@ public class SingleEventServiceImpl implements ISingleEventService {
         {
             String key = keysItr.next();
             if(key.equalsIgnoreCase("protocol"))
+            {
             	protocol=jsonObj.getString(key).toString();
+            	break;
+            }
         }
 		String imgUrl=SpringBootWebApplication.getProtocolToImgMap().get(protocol.toLowerCase());
 		topicWiseObjListMap.put("image", imgUrl);
