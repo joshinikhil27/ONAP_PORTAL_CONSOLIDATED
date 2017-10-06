@@ -10,6 +10,7 @@ app.controller('presistDataCtrl',function($scope,$http,$filter,$rootScope,$state
 	
 	$scope.hideUploadMenu = false;
 	$scope.uploadSuccessfull = false;
+	$scope.storeConfig = false;
 	$scope.index = 1;
 	$scope.modalLine1 = '';
 	$scope.imageSrc = "resources/images/successImg.png";
@@ -580,8 +581,9 @@ app.controller('presistDataCtrl',function($scope,$http,$filter,$rootScope,$state
     	 $("#configModal").modal('show');
 	    	
 	     })*/
-	     $scope.testData='resources/images/preTestResults.gif';
+	     $scope.testData='resources/images/Final01.gif';
 	     $("#configModal").modal('show');
+	     $(".modal-content").attr('style', 'width: 802px !important; max-height: 383px !important; margin-left: -150px;');	     
      }
      
      /*$scope.openModal2=function(){
@@ -611,9 +613,14 @@ app.controller('presistDataCtrl',function($scope,$http,$filter,$rootScope,$state
 	     })
      }*/
      $scope.openModal5=function(){
-	    	 $scope.testData=$scope.configString;
-	    	 console.log("UAUSUSUA"+$scope.testData)
-    	 $("#applyConfigModal").modal('show');
+    	 $scope.testData=$scope.configString;
+    	$("#applyConfigModal").modal('show');
+     }
+     
+     $scope.openModal6=function(){
+    	 $scope.testData=$scope.configString;
+    	 $scope.storeConfig = true;
+    	 $("#storeConfigModal").modal('show');
      }
      
      
