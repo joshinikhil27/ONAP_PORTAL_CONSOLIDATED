@@ -26,12 +26,14 @@
                         <div class="panel-body">
                         	<table class="table table-bordered">
 								<tr class="bg-primary">
+									<th class="gridStyle text-center">VNF Source</th>
 									<th class="gridStyle text-center">Date</th>
 									<th class="gridStyle text-center">User Id</th>
 									<th class="gridStyle text-center">Username</th>
 									<th class="gridStyle text-center">Action</th>
 								</tr>
 							    <tr ng-repeat="summ in summary">
+								<td class="gridStyle text-center">{{summ.procesedNode.vnfSource}}</td>
 							    	<td class="gridStyle text-center">{{summ.userInfo.date | date:'yyyy-MM-dd HH:mm:ss'}}</td>
 							    	<td class="gridStyle text-center">{{summ.userInfo.userid}}</td>
 							    	<td class="gridStyle text-center">{{summ.userInfo.username}}</td>
