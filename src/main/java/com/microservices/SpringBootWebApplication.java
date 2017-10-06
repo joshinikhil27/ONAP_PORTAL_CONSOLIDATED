@@ -41,10 +41,11 @@ public class SpringBootWebApplication {
 			String snmpImg=prop.getProperty("snmp");
 			String netflowImg=prop.getProperty("netflow");
 			String syslogImg=prop.getProperty("syslog");
-			
+			 String netconf=prop.getProperty("netconf");
 			protocolToImgMap.put("snmp", snmpImg);
 			protocolToImgMap.put("netflow", netflowImg);
 			protocolToImgMap.put("syslog", syslogImg);
+		        protocolToImgMap.put("netconf",netconf);
 		}
 		catch(Exception ex)
 		{
