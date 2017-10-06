@@ -5,7 +5,7 @@
 <div>
     <table class="table table-bordered">
         <thead class="bg-primary">
-<!--             <th class="gridStyle text-center">date</th> -->
+	    <th class="gridStyle text-center">VNF Source</th>
             <th class="gridStyle text-center">cpu (%)</th>
             <th class="gridStyle text-center">Memory (%)</th>
             <th class="gridStyle text-center">Network (%)</th>
@@ -23,7 +23,7 @@
     </table>
      <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="resources/directives/dirPagination.tpl.html"></dir-pagination-controls>
     <script type="text/ng-template" id="display">
-        <!-- td>{{contact.date | date : longDate}}</td -->
+        <td>{{contact.vnfSource}}</td>
         <td>{{contact.cpu}}</td>
         <td>{{contact.memory}}</td>
         <td>{{contact.network}}</td>
@@ -40,7 +40,7 @@
         </td>
     </script>
     <script type="text/ng-template" id="edit">
-        <!-- td><input type="text" class="textClass" ng-model="model.selected.date" ng-disabled="true" /></td -->
+        <td><input type="text" class="textClass" ng-model="model.selected.vnfSource" ng-disabled="true" /></td>
         <td><input type="text" class="textClass" ng-model="model.selected.cpu" /></td>
         <td><input type="text" class="textClass" ng-model="model.selected.memory" /></td>
         <td><input type="text" class="textClass" ng-model="model.selected.network" /></td>
