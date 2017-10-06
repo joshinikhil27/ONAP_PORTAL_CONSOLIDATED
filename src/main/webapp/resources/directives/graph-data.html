@@ -3,6 +3,7 @@
 	<tr class="bg-primary">
 		<!-- <th class="gridStyle text-center" ng-repeat="head in  header" ng-if="head != 'link1' && head != 'link2' && head != 'link3' && head != 'responseTime' && head != 'prediction'" ng-bind="head"></th>
 		<th>##</th> -->
+		<th class="gridStyle text-center">VNF Source</th>
 		<th class="gridStyle text-center">date</th>
 		<th class="gridStyle text-center">Cpu (%)</th>
 		<th class="gridStyle text-center">Memory (%)</th>
@@ -15,6 +16,7 @@
 		<th class="gridStyle text-center">Select</th>
 	</tr>
     <tr dir-paginate="data in tabledata | itemsPerPage:10 ">
+	<td>{{data.vnfSource}}</td>    
         <td ng-hide="!data.date">{{data.date | date:'yyyy-MM-dd HH:mm:ss'}}</td>
         <td ng-hide="!data.cpu">{{data.cpu}}</td>
         <td ng-hide="!data.memory">{{data.memory}}</td>
