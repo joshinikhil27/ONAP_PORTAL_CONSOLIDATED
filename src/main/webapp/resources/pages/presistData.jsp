@@ -72,6 +72,23 @@
 										    </div>
 	  										</div> 
 									</div>
+									<div ng-if="storeConfig" class="form-group">
+  										<div class="modal fade" id="storeConfigModal" role="dialog">
+										    <div class="modal-dialog modal-sm">
+										      <div class="modal-content">
+										        	<div class="modal-header">
+										       		   <button type="button" class="close" data-dismiss="modal">&times;</button>
+										      		    <h4 class="modal-title text-success">Configuration</h4>
+										      	 	 </div>
+											      	  <div class="modal-body">
+											      		  <div style="padding:15px;">
+											       		   <p>{{testData}}</p>
+											      		  </div>
+											       	 </div>
+										      </div>
+										    </div>
+	  										</div> 
+									</div>
 									<div ng-if="!applyConfig" class="configModal">
 										<input class="btn btn-success marginBottom" ng-click="openModal1()" value="Pre Test Results"/>
 										<!-- <input class="btn btn-success marginBottom" ng-click="openModal2()" value="Device Health test"/>
@@ -82,7 +99,7 @@
 										      <div class="modal-content">
 										        	<div class="modal-header">
 										       		   <button type="button" class="close" data-dismiss="modal">&times;</button>
-										      		    <h4 class="modal-title text-success">Pre Test Results</h4>
+										      		    <h4 class="modal-title">Pre Test Results</h4>
 										      	 	 </div>
 											      	  <div class="modal-body">
 											      		  <div style="padding:15px;">
@@ -131,7 +148,7 @@
 					    <div id="failedDiv" ng-class="failedFLow?'statusTxtFailed':'statusTxt'">Update Configuration</div>
 				    </li>
 				    
-				    <li id="3" class=" " >
+				    <li id="3" class=" " ng-click="openModal5()">
 				   		 <img class="statusImg" id="img_3" src="resources/images/Apply_config_01.png" ng-click="openModal5()" >
 				   		 <div id="failedDiv" ng-class="failedFLow?'statusTxtFailed':'statusTxt'" ng-click="openModal5()" >Apply Configuartion</div>
 				    </li>
@@ -142,9 +159,9 @@
 				    </li>
 				    
 				    <!-- Success Flow -->
-					    <li ng-if="!failedFLow" id="5" class= " ">
-						    <img class="statusImg" id="img_5" src="resources/images/Store_config_01.png">
-						    <div id="failedDiv" ng-class="failedFLow?'statusTxtFailed':'statusTxt'" >Store Configuration</div>
+					    <li ng-if="!failedFLow" id="5" class= " " ng-click="openModal6()">
+						    <img class="statusImg" id="img_5" src="resources/images/Store_config_01.png" ng-click="openModal6()">
+						    <div id="failedDiv" ng-class="failedFLow?'statusTxtFailed':'statusTxt'" ng-click="openModal6()" >Store Configuration</div>
 					    </li>
 					    
 					    <li ng-if="!failedFLow" id="6" class=" ">
