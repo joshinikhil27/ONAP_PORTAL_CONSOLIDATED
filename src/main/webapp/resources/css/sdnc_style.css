@@ -59,6 +59,7 @@ ul.checkout-bar li:nth-child(1):before {
     margin: 120px  auto;
     max-width: 1200px;
     position: relative;
+    z-index: 1;
 }
 ul, menu, dir {
     display: block;
@@ -115,12 +116,12 @@ ul.checkout-bar li {
     padding: 0;
     text-align: center;
     width: 13%;
- 
+ 	cursor: pointer;
 }
 
-ul.checkout-bar li #img_3 {
+/* ul.checkout-bar li #img_3 {
 	cursor: pointer;
-}
+} */
 
 
 ul.checkout-bar li:nth-child(2):before {
@@ -454,7 +455,7 @@ ul.checkout-bar li:nth-child(3):before {
 	border-bottom: 1px solid #ddd;
 } */
 /* added by Abinandh */
-#configModal .modal-content,#applyConfigModal .modal-content {
+#configModal .modal-content, #applyConfigModal .modal-content, #storeConfigModal .modal-content {
 	width: 500px;
 	max-height: 350px;
 	overflow: auto;
@@ -462,4 +463,15 @@ ul.checkout-bar li:nth-child(3):before {
 }
 #configModal .modal-content {
 	width: 612px !important;
+}
+#configModal .modal-header, #applyConfigModal .modal-header, #storeConfigModal .modal-header {
+	background: #d24d57;
+}
+#configModal .modal-header button, #applyConfigModal .modal-header button, #storeConfigModal .modal-header button {
+	color: #ffffff;
+	text-shadow: none;
+	opacity: 1;
+}
+#configModal .modal-header h4, #applyConfigModal .modal-header h4, #storeConfigModal .modal-header h4 {
+	color: #ffffff;
 }
