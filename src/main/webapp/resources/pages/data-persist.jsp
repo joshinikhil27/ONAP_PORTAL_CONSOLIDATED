@@ -85,10 +85,6 @@ div.tooltip {
   	<div class="col-md-6 section-header margin-top-20 margin-bottom-20">
 			<span>ML Trainer</span>
 		</div>
-		<!-- div class="alert alert-info col-md-6 margin-top-20 margin-bottom-20">
-			Algorithm : <b>KNN</b> <br>
-			Accuracy : Training Algorithms Accuracy is <b>{{accuracy}} %</b>
-		</div -->
   </div>
 	<div class="row">
 		<div class="col-lg-9">
