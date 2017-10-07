@@ -10,7 +10,7 @@ app.controller('importVNFCtrl',['http_url','$scope','$http','$filter','$rootScop
 	$scope.RunML=function (){ 
 		$http.put(http_url+'demo/onap/TriggerPredictionVnf')
 	       .then(function(res){
-	   		$state.go('persistedData');
+	   		$state.go('persistedData',{"id" : 1});
 	    });
 	}
 	$scope.importVNFdata = function(){
