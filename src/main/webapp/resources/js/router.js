@@ -13,7 +13,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             data : {pageTitle : 'Training VNF Data'}
         })
         .state('persistedData', {
-            url: '/ML-Trainer',
+            url: '/ML-Trainer/:id',
             templateUrl: 'resources/pages/data-persist.jsp',
             controller : 'persistCtrl',
             data : {pageTitle : 'ML Trainer'}
