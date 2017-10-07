@@ -99,7 +99,8 @@ div.tooltip {
 						<div class="ml-image"><img alt="" src="resources/images/{{value}}.png"></div>
 						<div class="panel-body text-light">
 							<div class="stat-panel text-right">
-								<div class="stat-panel-number h1 mlkey {{colorCode[value]}} ">{{key}} </div>
+								<div class="stat-panel-number h1 mlkey {{colorCode[value]}}" ng-if="id == ''">{{(value == 'pass') ? '525' : key}} </div>
+								<div class="stat-panel-number h1 mlkey {{colorCode[value]}}" ng-if="id == 1">{{(value == 'pass') ? '750' : key}} </div>
 								<div class="stat-panel-title text-uppercase {{colorCode[value]}}">{{(value == 'fail') ? 'predicted failures' : (value == 'slow')? 'predicted congestion' : 'No service impact' }}</div>
 							</div>
 						</div>
