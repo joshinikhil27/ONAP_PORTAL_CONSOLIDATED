@@ -1,4 +1,5 @@
 app.controller('persistCtrl',['http_url','$scope','$http','$filter','$rootScope','$state','$timeout',function(http_url,$scope,$http,$filter,$rootScope,$state,$timeout){
+	$scope.id = $state.params.id;
 	$scope.showLoading = true;  
 	$scope.currentPage = 1;
 	$scope.pageSize = 10;
