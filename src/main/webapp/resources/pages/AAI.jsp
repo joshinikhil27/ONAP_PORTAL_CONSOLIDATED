@@ -114,9 +114,9 @@ div.container {
 			<!-- <label>Object type : </label> --> 
 			<select name="obj_type" id="obj_type" class="form-control" onchange="changeCat(this)">
 				<option selected>Object Type</option>
-				<option value="Cust">Customer</option>
-				<option value="Pserver">Pserver</option>
-				<option value="Pnf">Pnf</option>
+				<option value="Cust" disabled>Customer</option>
+				<option value="Pserver" disabled>Pserver</option>
+				<option value="Pnf" disabled>Pnf</option>
 			</select>
 		</div>
 		<div class="col-md-2 selectdiv">
