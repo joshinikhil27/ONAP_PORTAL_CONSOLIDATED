@@ -128,7 +128,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">
+                <a href="" class="navbar-brand">
                 	<img class="float-left" alt="" width="150px" src="resources/images/logo_onap_2017.png">
                 	<img onclick="toggleSidebar()" class="float-left" alt="" width="30px" src="resources/images/hlines.png" style="margin-left: 20px;">
                 	<!-- <span class="header-text">SDNC Pretest</span> -->
@@ -280,7 +280,7 @@
 		</script>
 		
 
-€€
+Â€Â€
 </body>
 
 </html>
