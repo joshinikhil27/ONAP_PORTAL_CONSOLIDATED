@@ -53,7 +53,7 @@ debugger;
     var root;
 
     // size of the diagram
-    var viewerWidth = $(document).width()/1.331;
+    var viewerWidth = $(document).width()/1.072;
 	
     var viewerHeight =  $(document).height()/1.8;
 
@@ -85,7 +85,7 @@ debugger;
     // Call visit function to establish maxLabelLength
     visit(treeData, function(d) {
         totalNodes++;
-        maxLabelLength = Math.max(d.name.length, maxLabelLength)/1.4;
+        maxLabelLength = Math.max(d.name.length, maxLabelLength)/1.1;
 		
 
     }, function(d) {
@@ -345,8 +345,8 @@ debugger;
         scale = zoomListener.scale();
         x = -source.y0;
         y = -source.x0;
-        x =   viewerWidth / 4;
-        y =   viewerHeight / 3.5;
+        x =   viewerWidth / 12;
+        y =   viewerHeight / 4;
         d3.select('g').transition()
             .duration(duration)
             .attr("transform", "translate(" + x + "," + y + ")scale(" + scale + ")");
@@ -390,7 +390,13 @@ debugger;
 		if(check==0){
 		check=S_SUBSclicked(root,d);
 	}
-	
+	if(check==0){
+		check=VNFclicked(root,d);
+	}
+	if(check==0){
+		check=VSRVRclicked(root,d);
+	}
+		
 	centerNode(d);
         update(d);
     }
@@ -399,7 +405,7 @@ debugger;
         // Compute the new height, function counts total children of root node and sets tree height accordingly.
         // This prevents the layout looking squashed when new nodes are made visible or looking sparse when nodes are removed
         // This makes the layout more consistent.
-        var levelWidth = [1];
+        var levelWidth = [10];
         var childCount = function(level, n) {
 
             if (n.children && n.children.length > 0) {
@@ -421,7 +427,7 @@ debugger;
 
         // Set widths between levels based on maxLabelLength.
         nodes.forEach(function(d) {
-            d.y = (d.depth * (maxLabelLength * 10)); //maxLabelLength * 10px
+            d.y = (d.depth * (maxLabelLength * 15)); //maxLabelLength * 10px
             // alternatively to keep a fixed scale one can set a fixed depth per level
             // Normalize for fixed-depth by commenting out below line
             // d.y = (d.depth * 500); //500px per level.
@@ -456,7 +462,7 @@ debugger;
                 return d.children || d._children ? -10 : 10;
             })
 			.style("font-size","12.5px")//aish
-            .attr("dy", ".35mm")
+            .attr("dy", "-0.40mm")
             .attr('class', 'nodeText')
             .attr("text-anchor", function(d) {
                 return d.children || d._children ? "end" : "start";
